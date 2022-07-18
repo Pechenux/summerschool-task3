@@ -1,0 +1,134 @@
+.App {
+  background-color: #eaeaea;
+  text-align: center;
+  overflow: hidden;
+}
+
+.Page {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.Page-header {
+  height: 60px;
+  padding: 0.5em;
+
+  display: flex;
+}
+.Shop-name {
+  cursor: pointer;
+  text-decoration: none;
+
+  display: inline-flex;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: calc(10px + 2vmin);
+  line-height: 30px;
+
+  color: #101010;
+}
+
+.Cart-button {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  margin: 10px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.Cart-icon {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  margin: auto;
+}
+
+.Cart-button:before {
+  content: attr(data-count);
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  display: block;
+  border-radius: 20%;
+  background: #FF9727;
+  border: 1px solid #FFF;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  color: #FFF;
+  position: absolute;
+  top: -10px;
+  left: auto;
+  right: -10px;
+}
+
+.Page-footer {
+  margin: 0;
+  background-color: red;
+  height: 60px;
+  display: block;
+
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.Catalog {
+  flex: auto;
+}
+
+.Categories {
+  margin: auto;
+}
+
+.Category {
+  margin: 0.5em;
+  margin-bottom: 1em;
+}
+
+.CategoryName {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: calc(10px + 1vmin);
+  line-height: 24px;
+
+  color: #838383;
+
+  margin-bottom: 0.5em;
+
+  text-align: left;
+}
+
+.GoodsGrid {
+  /* max-width: 60%; */
+
+  margin: auto;
+
+  display: grid;
+  grid-gap: 20px;
+  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.Card {
+  background-color: white;
+  aspect-ratio: 35/40;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10%;
+
+  display: block;
+}
+
+.Card>img {
+  display: block;
+  width: 80%;
+  margin: auto;
+}

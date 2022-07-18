@@ -1,21 +1,93 @@
-import logo from './shopingcart.svg';
-import './App.css';
-import Categories from './Categories';
+import { useState } from 'react';
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+
+import Categories from './components/Categories';
+import Cart from './components/Cart';
+
+import cart from './img/shopingcart.svg';
+import './css/App.css';
 
 function App() {
+    let [cartCount, setcartCount] = useState(getTotalCount());
+
+    function addItem(id) {
+        setItemCount(id, getItemCount(id) + 1);
+        setcartCount(getTotalCount());
+    }
+
+    function removeItem(id) {
+        setItemCount(id, getItemCount(id) - 1);
+        setcartCount(getTotalCount());
+    }
+
+    function getItemCount(id) {
+        let cardList = sessionStorage.getItem("Cart");
+
+        if (cardList) {
+            cardList = JSON.parse(cardList);
+        } else {
+            cardList = {};
+        }
+
+        return cardList[id] ?? 0;
+    }
+
+    function setItemCount(id, value) {
+        let cardList = sessionStorage.getItem("Cart");
+
+        if (cardList) {
+            cardList = JSON.parse(cardList);
+        } else {
+            cardList = {};
+        }
+        if (value <= 0)
+            delete cardList[id]
+        else
+            cardList[id] = value;
+
+        sessionStorage.setItem("Cart", JSON.stringify(cardList));
+    }
+
+    function getTotalCount() {
+        let totalCount = 0;
+        let cardList = sessionStorage.getItem("Cart");
+
+        if (cardList) {
+            cardList = JSON.parse(cardList);
+        } else {
+            return 0;
+        }
+
+        for (let id in cardList) {
+            totalCount += cardList[id];
+        }
+
+        return totalCount;
+    }
+
     return (
         <div className="App">
+            <BrowserRouter>
             <div className="Page">
                 <header className="Page-header">
-                    <div className="Shop-name">QPICK</div>
+                    <Link className="Shop-name" to='/'>QPICK</Link>
+                    <Link data-count={cartCount} className="Cart-button" to='/cart'>
+                        <img className="Cart-icon" src={cart} />
+                    </Link>
                 </header>
-                <div className="Catalog">
-                    <Categories></Categories>
-                </div>
+                    <Routes>
+                        <Route path='/' element={
+                            <div className="Catalog">
+                                <Categories add={addItem} />
+                            </div>
+                        } />
+                        <Route path='/cart' element={ <Cart></Cart> } />
+                    </Routes>
                 <footer className="Page-footer">
 
                 </footer>
-            </div>
+                </div>
+            </BrowserRouter>
         </div>
     );
 }
