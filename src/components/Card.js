@@ -2,7 +2,6 @@ import React from 'react';
 import '../css/App.css';
 
 function Card(props) {
-
     return (
         <div key={'product' + props.product.id} className="Card">
             <img src={require("../img/goodsImages/" + props.product.img)}></img>

@@ -7,7 +7,7 @@ function GoodsGrid(props) {
             {
                 props.goods.map((product, index) => {
                     return (
-                        <Card add={props.add} product={product} />
+                        <Card key={product.id}  add={props.add} product={product} />
                     )
                 })
             }

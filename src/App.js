@@ -12,12 +12,10 @@ function App() {
 
     function addItem(id) {
         setItemCount(id, getItemCount(id) + 1);
-        setcartCount(getTotalCount());
     }
 
     function removeItem(id) {
         setItemCount(id, getItemCount(id) - 1);
-        setcartCount(getTotalCount());
     }
 
     function getItemCount(id) {
@@ -46,6 +44,7 @@ function App() {
             cardList[id] = value;
 
         sessionStorage.setItem("Cart", JSON.stringify(cardList));
+        setcartCount(getTotalCount());
     }
 
     function getTotalCount() {
@@ -81,7 +80,9 @@ function App() {
                                 <Categories add={addItem} />
                             </div>
                         } />
-                        <Route path='/cart' element={ <Cart></Cart> } />
+                        <Route path='/cart' element={
+                            <Cart cartCount={cartCount} add={addItem} remove={removeItem} getCount={getItemCount} setCount={setItemCount} />
+                        } />
                     </Routes>
                 <footer className="Page-footer">
 

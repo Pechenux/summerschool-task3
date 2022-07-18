@@ -18,11 +18,12 @@
 
   display: flex;
 }
+
 .Shop-name {
   cursor: pointer;
   text-decoration: none;
 
-  display: inline-flex;
+  float: left;
   margin-top: auto;
   margin-bottom: auto;
 
@@ -36,6 +37,8 @@
 }
 
 .Cart-button {
+  display: block;
+    float: right;
   position: relative;
   width: 64px;
   height: 64px;
@@ -43,26 +46,24 @@
   color: white;
   cursor: pointer;
   text-decoration: none;
-}
 
-.Cart-icon {
-  position: relative;
-  width: 64px;
-  height: 64px;
-  margin: auto;
+  margin-left: auto;
 }
 
 .Cart-button:before {
+  z-index: 100;
   content: attr(data-count);
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
+font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
   text-align: center;
+  width: 30px;
+    height: 30px;
+    line-height: 30px;
   display: block;
-  border-radius: 20%;
-  background: #FF9727;
-  border: 1px solid #FFF;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+    background: #FFA542;
   color: #FFF;
   position: absolute;
   top: -10px;
@@ -70,6 +71,12 @@
   right: -10px;
 }
 
+.Cart-icon {
+  width: 64px;
+  height: 64px;
+  position: relative;
+  margin: auto;
+}
 .Page-footer {
   margin: 0;
   background-color: red;
@@ -108,13 +115,10 @@
 }
 
 .GoodsGrid {
-  /* max-width: 60%; */
-
   margin: auto;
 
   display: grid;
   grid-gap: 20px;
-  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -131,4 +135,28 @@
   display: block;
   width: 80%;
   margin: auto;
+}
+
+.BuyButton {
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.Cart {
+  flex: auto;
+  margin: 0.5em;
+}
+
+.CartTitle {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: calc(10px + 1vmin);
+  line-height: 24px;
+
+  color: #1C1C27;
+
+  
+  text-align: left;
 }
