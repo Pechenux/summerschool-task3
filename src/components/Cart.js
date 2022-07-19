@@ -40,7 +40,7 @@ function Cart(props) {
             <div className='CartCheckout'>Итого {getTotalPrice()}</div>
             <div className='CartList'>
                 {Object.keys(cartList).map((key, i) => {
-                    return (<CartItem add={props.add} remove={props.remove} getCount={props.getCount} setCount={props.setCount} product={getProductById(key)} key={i} />)
+                    return (<CartItem add={props.add} remove={props.remove} getCount={props.getCount} setCount={props.setCount} product={getProductById(key)} key={key} />)
                 })}
             </div>
         </div>
