@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/App.css';
+import star from '../img/star.svg'
 
 function Card(props) {
     return (
@@ -12,7 +13,7 @@ function Card(props) {
                         <div className='ProductPrice'>{props.product.price} ₽</div>
                     </div>
                     <div className='CardRow'>
-                        <div className='ProductRate'>{props.product.rate}</div>
+                        <div className='ProductRate'><img className="RateIcon" src={star} />{props.product.rate}</div>
                         <div onClick={() => props.add(props.product.id)} className='BuyButton'>Купить</div>
                     </div>
                 </div>

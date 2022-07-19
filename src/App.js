@@ -67,13 +67,13 @@ function App() {
     return (
         <div className="App">
             <BrowserRouter>
-            <div className="Page">
-                <header className="Page-header">
-                    <Link className="Shop-name" to='/'>QPICK</Link>
-                    <Link data-count={cartCount} className="Cart-button" to='/cart'>
-                        <img className="Cart-icon" src={cart} />
-                    </Link>
-                </header>
+                <div className="Page">
+                    <header className="Page-header">
+                        <Link className="Shop-name" to='/'>QPICK</Link>
+                        <Link data-count={cartCount} className="Cart-button" to='/cart'>
+                            <img className="Cart-icon" src={cart} />
+                        </Link>
+                    </header>
                     <Routes>
                         <Route path='/' element={
                             <div className="Catalog">
@@ -84,9 +84,26 @@ function App() {
                             <Cart cartCount={cartCount} add={addItem} remove={removeItem} getCount={getItemCount} setCount={setItemCount} />
                         } />
                     </Routes>
-                <footer className="Page-footer">
-
-                </footer>
+                    <footer className="Page-footer">
+                        <div className='Footer-conteiner'>
+                            <Link className='Footer-Shop-name' to='/'>QPICK</Link>
+                            <div className='Quick-links'>
+                                <ul>
+                                    <li>Избранное</li>
+                                    <li>Корзина</li>
+                                    <li>Контакты</li>
+                                </ul>
+                            </div>
+                            <div className='Quick-links'>
+                                <ul>
+                                    <li>Условия сервиса</li>
+                                    <li><div>PL</div><div>RUS</div><div>ENG</div></li>
+                                </ul>
+                            </div>
+                            <div><div>VK</div><div>Tele</div><div>Watsapp</div></div>
+                        </div>
+                        
+                    </footer>
                 </div>
             </BrowserRouter>
         </div>

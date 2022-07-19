@@ -38,7 +38,7 @@
 
 .Cart-button {
   display: block;
-    float: right;
+  float: right;
   position: relative;
   width: 64px;
   height: 64px;
@@ -53,17 +53,17 @@
 .Cart-button:before {
   z-index: 100;
   content: attr(data-count);
-font-family: 'Montserrat';
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   text-align: center;
   width: 30px;
-    height: 30px;
-    line-height: 30px;
+  height: 30px;
+  line-height: 30px;
   display: block;
   border-radius: 50%;
-    background: #FFA542;
+  background: #FFA542;
   color: #FFF;
   position: absolute;
   top: -10px;
@@ -79,13 +79,57 @@ font-family: 'Montserrat';
 }
 
 .Page-footer {
+  display: flex;
+  justify-content: space-between;
+
   margin: 0;
-  background-color: red;
-  height: 60px;
-  display: block;
+  background-color: #fff;
+  height: 180px;
+  border-radius: 30px 30px 0px 0px;
 
   font-size: calc(10px + 2vmin);
   color: black;
+}
+
+.Footer-conteiner {
+  display: flex;
+  justify-content: space-between;
+  
+  width: 100%;
+  height: 100%;
+  margin: 30px;
+}
+
+.Footer-Shop-name {
+  cursor: pointer;
+  text-decoration: none;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: calc(10px + 1vmin);
+  line-height: 30px;
+
+  color: #101010;
+}
+
+.Quick-links > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.Quick-links > ul > li {
+  font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 21px;
+
+    margin-bottom: 20px;
+  
+    color: #000000;
 }
 
 .Catalog {
@@ -170,22 +214,32 @@ font-family: 'Montserrat';
 
 .ProductPrice {
   font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 17px;
-    line-height: 21px;
-  
-    color: #FFA542;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+
+  color: #FFA542;
 }
 
 .ProductRate {
+  display: flex;
+  align-items: center;
+
   font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 17px;
-    line-height: 21px;
-  
-    color: #838383;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+
+  color: #838383;
+}
+
+.RateIcon {
+  /* vertical-align: middle; */
+  margin-right: 5px;
+  height: 17px;
+  width: 17px;
 }
 
 .BuyButton {
