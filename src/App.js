@@ -5,6 +5,11 @@ import Categories from './components/Categories';
 import Cart from './components/Cart';
 
 import cart from './img/shopingcart.svg';
+import languagePlanet from './img/languagePlanet.svg';
+import vkIcon from './img/VK.svg';
+import telegramIcon from './img/Telegram.svg';
+import whatsappIcon from './img/Whatsapp.svg';
+
 import './css/App.css';
 
 function App() {
@@ -90,17 +95,25 @@ function App() {
                             <div className='Quick-links'>
                                 <ul>
                                     <li>Избранное</li>
-                                    <li>Корзина</li>
+                                    <li><Link className='Footer-cartlink' to='/cart'>Корзина</Link></li>
                                     <li>Контакты</li>
                                 </ul>
                             </div>
                             <div className='Quick-links'>
                                 <ul>
                                     <li>Условия сервиса</li>
-                                    <li><div>PL</div><div>RUS</div><div>ENG</div></li>
+                                    <li>
+                                        <img className='LangButton' src={languagePlanet} />
+                                        <div className='LangButton active'>Рус</div>
+                                        <div className='LangButton'>Eng</div>
+                                    </li>
                                 </ul>
                             </div>
-                            <div><div>VK</div><div>Tele</div><div>Watsapp</div></div>
+                            <div className='SocialsConteiner'>
+                                <img className='SocialsButton' src={vkIcon} />
+                                <img className='SocialsButton' src={telegramIcon} />
+                                <img className='SocialsButton' src={whatsappIcon} />
+                            </div>
                         </div>
                         
                     </footer>

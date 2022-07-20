@@ -37,11 +37,16 @@ function Cart(props) {
     return (
         <div className="Cart">
             <div className='CartTitle'>Корзина</div>
-            <div className='CartCheckout'>Итого {getTotalPrice()}</div>
-            <div className='CartList'>
-                {Object.keys(cartList).map((key, i) => {
-                    return (<CartItem add={props.add} remove={props.remove} getCount={props.getCount} setCount={props.setCount} product={getProductById(key)} key={key} />)
-                })}
+            <div className='CartContainer'>
+                <div className='CartList'>
+                    {Object.keys(cartList).map((key, i) => {
+                        return (<CartItem add={props.add} remove={props.remove} getCount={props.getCount} setCount={props.setCount} product={getProductById(key)} key={key} />)
+                    })}
+                </div>
+                <div className='CartCheckout'>
+                    <div className='CartTotalPrice'><div>Итого</div><div>{getTotalPrice()}</div></div>
+                    <div className='CartCheckoutButton'>Перейти к оформлению</div>
+                </div>
             </div>
         </div>
     );

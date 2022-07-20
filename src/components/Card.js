@@ -6,7 +6,7 @@ function Card(props) {
     return (
         <div key={'product' + props.product.id} className="Card">
             <div className='CardContent'>
-                <img className='CardImage' src={require("../img/goodsImages/" + props.product.img)}></img>
+                <img className='CardImage' src={require("../img/goodsImages/" + props.product.img)} />
                 <div className='CardDescription'>
                     <div className='CardRow'>
                         <div className='ProductName'>{props.product.title}</div>
