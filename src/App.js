@@ -90,7 +90,7 @@ function App() {
                         } />
                     </Routes>
                     <footer className="Page-footer">
-                        <div className='Footer-conteiner'>
+                        <div className='Footer-container'>
                             <Link className='Footer-Shop-name' to='/'>QPICK</Link>
                             <div className='Quick-links'>
                                 <ul>
@@ -109,7 +109,7 @@ function App() {
                                     </li>
                                 </ul>
                             </div>
-                            <div className='SocialsConteiner'>
+                            <div className='SocialsContainer'>
                                 <img className='SocialsButton' src={vkIcon} />
                                 <img className='SocialsButton' src={telegramIcon} />
                                 <img className='SocialsButton' src={whatsappIcon} />

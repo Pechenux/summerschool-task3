@@ -44,7 +44,10 @@ function Cart(props) {
                     })}
                 </div>
                 <div className='CartCheckout'>
-                    <div className='CartTotalPrice'><div>Итого</div><div>{getTotalPrice()}</div></div>
+                    <div className='CartTotalPrice'>
+                        <div className='CartTotalPriceText first'>Итого</div>
+                        <div className='CartTotalPriceText second'>{getTotalPrice()}</div>
+                    </div>
                     <div className='CartCheckoutButton'>Перейти к оформлению</div>
                 </div>
             </div>

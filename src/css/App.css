@@ -91,7 +91,7 @@
   color: black;
 }
 
-.Footer-conteiner {
+.Footer-container {
   display: flex;
   justify-content: space-between;
   
@@ -121,6 +121,8 @@
 }
 
 .Quick-links > ul > li {
+  cursor: pointer;
+
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
@@ -157,12 +159,14 @@
   color: #FFA542;
 }
 
-.SocialsConteiner {
+.SocialsContainer {
   margin: 0;
   padding: 0;
 }
 
 .SocialsButton {
+  cursor: pointer;
+
   vertical-align: top;
   margin-top: 0;
   display: inline-block;
@@ -316,6 +320,8 @@
   
   width: 100%;
   height: 100%;
+
+  margin-bottom: 0.5em;
 }
 
 .CartItem {
@@ -323,13 +329,191 @@
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
 
-  width: 600px;
-  height: 200px;
+  width: 900px;
+  height: 300px;
 
   margin-top: 1em;
 }
 
+.CartItemContainer {
+  display: block;
+  /* justify-content: space-between; */
+
+  height: 100%;
+  position: relative;
+  padding: 0.5em;
+}
+
+.CartItemColumn {
+  display: inline-block;
+
+  gap: 10px;
+  height: 100%;
+  position: relative;
+}
+
+.CartItemColumn.first {
+  float: left;
+}
+
+.CartItemColumn.second {
+  margin-left: 30px;
+  float: left;
+}
+
+.CartItemColumn.third {
+  margin-right: 20px;
+  float: right;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .CartCheckout {
-  height: 100px;
-  top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 400px;
+  height: 150px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+}
+
+.CartTotalPrice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.CartTotalPriceText {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 75px;
+
+  color: #000000;
+
+  display: inline-block;
+}
+
+.CartTotalPriceText.first {
+  margin-left: 20px;
+}
+
+.CartTotalPriceText.second {
+  margin-right: 20px;
+}
+
+.CartCheckoutButton {
+  cursor: pointer;
+
+  color: #fff;
+  background-color: #000000;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 75px;
+
+  text-align: center;
+
+  border-radius: 30px;
+
+  height: 75px;
+  width: 100%;
+}
+
+.CartCountControls {
+  width: 100%;
+
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  bottom: 30px;
+  align-self: center;
+}
+
+.CartProductCount {
+  display: inline-block;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 30px;
+
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+
+.CartProductMinus, .CartProductPlus {
+  display: inline-block;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+
+  border-radius: 30px;
+  height: 30px;
+  width: 30px;
+
+  color: white;
+  background-color: #FFCE7F;
+}
+
+.CartItemText {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.CartProductName {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 21px;
+
+  margin-bottom: 20px;
+
+  color: #1C1C27;
+}
+
+.CartProductPrice {
+  text-align: left;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 18px;
+
+  color: #AAAAAA;
+}
+
+.CartProductRemove {
+  margin-top: 15px;
+  text-align: right;
+}
+
+.CartProductTotalPrice {
+  margin-bottom: 30px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 18px;
+  text-align: right;
+
+  width: max-content;
+
+  color: #1C1C27;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/App.css';
+
 import star from '../img/star.svg'
 
 function Card(props) {
