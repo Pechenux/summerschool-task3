@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, {  } from 'react';
 import '../css/App.css';
 
 import trashbin from '../img/trashBin.svg'
@@ -8,7 +8,7 @@ function CartItem(props) {
         <div className="CartItem" key={'product' + props.product.id}>
             <div className='CartItemContainer'>
                 <div className='CartItemColumn first'>
-                    <img src={require("../img/goodsImages/" + props.product.img)}></img>
+                    <img src={require("../img/goodsImages/" + props.product.img)} alt={props.product.img}></img>
                     <div className='CartCountControls'>
                         <div className='CartProductMinus' onClick={() => props.remove(props.product.id)}>-</div>
                         <div className='CartProductCount'>{props.getCount(props.product.id)}</div>
@@ -23,7 +23,7 @@ function CartItem(props) {
                 </div>
                 <div className='CartItemColumn third'>
                     <div className='CartProductRemove' onClick={() => props.setCount(props.product.id, 0)}>
-                        <img src={trashbin} />
+                        <img src={trashbin} alt="trashbin"/>
                     </div>
                     <div className='CartProductTotalPrice'>{props.product.price * props.getCount(props.product.id)} ₽</div>
                 </div>

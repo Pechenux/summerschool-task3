@@ -76,7 +76,7 @@ function App() {
                     <header className="Page-header">
                         <Link className="Shop-name" to='/'>QPICK</Link>
                         <Link data-count={cartCount} className="Cart-button" to='/cart'>
-                            <img className="Cart-icon" src={cart} />
+                            <img className="Cart-icon" src={cart} alt="Cart"/>
                         </Link>
                     </header>
                     <Routes>
@@ -103,16 +103,16 @@ function App() {
                                 <ul>
                                     <li>Условия сервиса</li>
                                     <li>
-                                        <img className='LangButton' src={languagePlanet} />
+                                        <img className='LangButton' src={languagePlanet} alt="Langs"/>
                                         <div className='LangButton active'>Рус</div>
                                         <div className='LangButton'>Eng</div>
                                     </li>
                                 </ul>
                             </div>
                             <div className='SocialsContainer'>
-                                <img className='SocialsButton' src={vkIcon} />
-                                <img className='SocialsButton' src={telegramIcon} />
-                                <img className='SocialsButton' src={whatsappIcon} />
+                                <img className='SocialsButton' src={vkIcon} alt="VK" />
+                                <img className='SocialsButton' src={telegramIcon} alt="Telegram" />
+                                <img className='SocialsButton' src={whatsappIcon} alt="Whatsapp" />
                             </div>
                         </div>
                         

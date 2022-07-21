@@ -13,7 +13,6 @@ function Cart(props) {
             if (products.length >= 1)
                 return products[0];
         }
-        console.log(id);
         return { id: id, img: "", title: "Error", price: 0, rate: 0 };
     }
 
@@ -21,6 +20,7 @@ function Cart(props) {
         let totalPrice = 0;
         Object.keys(cartList).map((key, i) => {
             totalPrice += getProductById(key).price * cartList[key];
+            return key;
         })
         return totalPrice;
     }
